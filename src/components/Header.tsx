@@ -17,8 +17,10 @@ export const Header = () => {
 
 				<div className="pt-2">
 					<a
-						href="/resume.pdf"
+						href="https://drive.google.com/file/d/1BW8ZAgUNZIlLjzKMszZGhcYOvq3Itc_J/view?usp=sharing"
 						download
+						target="_blank"
+						rel="noopener noreferrer"
 						className="inline-flex items-center gap-2 px-4 py-2 border border-zinc-800 text-zinc-400 hover:text-zinc-200 hover:border-zinc-700 bg-zinc-950/20 hover:bg-zinc-900/40 text-xs font-mono uppercase tracking-wider transition-all duration-300"
 					>
 						<FaDownload className="text-zinc-500" />
