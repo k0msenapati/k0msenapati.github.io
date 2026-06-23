@@ -17,7 +17,7 @@ export const Header = () => {
 
 				<div className="pt-2">
 					<a
-						href="https://drive.google.com/file/d/1BW8ZAgUNZIlLjzKMszZGhcYOvq3Itc_J/view?usp=sharing"
+						href="https://drive.google.com/file/d/196JmgWnE-xKT2Qas0B5tO1CWWLpEUHzi/view?usp=drive_link"
 						download
 						target="_blank"
 						rel="noopener noreferrer"
