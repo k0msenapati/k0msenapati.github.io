@@ -23,14 +23,14 @@ const experiences: WorkItem[] = [
 
 export const Experience = () => {
 	return (
-		<section className="py-16 border-b border-zinc-900">
+		<section className="py-16 border-b border-zinc-800/80">
 			<div className="mb-12">
 				<h2 className="text-3xl font-light font-serif text-zinc-100 italic">
 					Work Experience
 				</h2>
 			</div>
 
-			<div className="relative border-l border-zinc-900 ml-1.5 pl-6 space-y-12">
+			<div className="relative border-l border-zinc-800/80 ml-1.5 pl-6 space-y-12">
 				{experiences.map((exp, index) => (
 					<ExperienceItem
 						key={index}

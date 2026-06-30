@@ -28,7 +28,7 @@ export const Contact = () => {
 				</h2>
 			</div>
 
-			<p className="text-zinc-450 text-sm sm:text-base max-w-lg mb-10 leading-relaxed font-sans">
+			<p className="text-zinc-300 text-sm sm:text-base max-w-lg mb-10 leading-relaxed font-sans font-light">
 				I am always open to discussing new projects, part-time work, or
 				full-time opportunities. Feel free to reach out.
 			</p>
@@ -40,7 +40,7 @@ export const Contact = () => {
 						href={link.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center justify-center w-11 h-11 rounded-full border border-zinc-900 bg-zinc-950/20 text-zinc-500 hover:text-zinc-200 hover:border-zinc-700 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5"
+						className="flex items-center justify-center w-11 h-11 rounded-full border border-zinc-800 bg-zinc-900/10 text-zinc-400 hover:text-teal-400 hover:border-teal-800 hover:bg-zinc-900/30 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-sm"
 						title={link.name}
 						aria-label={link.name}
 					>

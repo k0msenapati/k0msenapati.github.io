@@ -30,14 +30,14 @@ const educationData: EducationItemData[] = [
 
 export const Education = () => {
 	return (
-		<section className="py-16 border-b border-zinc-900">
+		<section className="py-16 border-b border-zinc-800/80">
 			<div className="mb-12">
 				<h2 className="text-3xl font-light font-serif text-zinc-100 italic">
 					Education
 				</h2>
 			</div>
 
-			<div className="relative border-l border-zinc-900 ml-1.5 pl-6 space-y-10">
+			<div className="relative border-l border-zinc-800/80 ml-1.5 pl-6 space-y-10">
 				{educationData.map((edu, index) => (
 					<EducationItem
 						key={index}

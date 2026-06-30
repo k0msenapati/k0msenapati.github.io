@@ -37,7 +37,7 @@ const projects: Project[] = [
 
 export const Projects = () => {
 	return (
-		<section className="py-16 border-b border-zinc-900">
+		<section className="py-16 border-b border-zinc-800/80">
 			<div className="mb-12">
 				<h2 className="text-3xl font-light font-serif text-zinc-100 italic">
 					Featured Projects
@@ -64,10 +64,13 @@ export const Projects = () => {
 					href="https://github.com/k0msenapati?tab=repositories"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="inline-flex items-center gap-2 px-4 py-2 border border-zinc-900 text-zinc-400 hover:text-zinc-200 hover:border-zinc-800 bg-zinc-950/15 text-xs font-mono uppercase tracking-wider transition-all duration-300"
+					className="group inline-flex items-center gap-2 px-4 py-2 border border-zinc-800 text-zinc-300 hover:text-teal-300 hover:border-teal-800 bg-zinc-900/10 hover:bg-zinc-900/40 text-xs font-mono uppercase tracking-wider transition-all duration-300"
 				>
 					<span>View All Projects</span>
-					<TbArrowRight size={14} />
+					<TbArrowRight
+						size={14}
+						className="text-zinc-400 group-hover:text-teal-400 group-hover:translate-x-0.5 transition-transform duration-300"
+					/>
 				</a>
 			</div>
 		</section>

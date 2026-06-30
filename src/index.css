@@ -5,6 +5,14 @@
 		'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		sans-serif;
 	--font-serif: 'Libre Baskerville', Georgia, serif;
+
+	--color-zinc-350: #b4b4bb;
+	--color-zinc-450: #888891;
+	--color-zinc-455: #82828b;
+	--color-zinc-550: #62626e;
+	--color-zinc-650: #4b4b53;
+	--color-zinc-850: #202024;
+	--color-zinc-855: #1c1c1f;
 }
 
 @layer base {
@@ -13,24 +21,37 @@
 	}
 
 	body {
-		background-color: #000000;
-		color: #a1a1aa; /* zinc-400 */
+		background-color: #0b0d0e;
+		background-image:
+			radial-gradient(
+				circle at 50% 0%,
+				rgba(63, 63, 70, 0.15) 0%,
+				transparent 60%
+			),
+			radial-gradient(
+				circle at 0% 100%,
+				rgba(39, 39, 42, 0.08) 0%,
+				transparent 40%
+			);
+		background-attachment: fixed;
+		color: #d4d4d8; /* zinc-300 for readable base text */
 		overflow-x: hidden;
+		min-height: 100vh;
 	}
 
 	/* Custom subtle scrollbar */
 	::-webkit-scrollbar {
-		width: 4px;
-		height: 4px;
+		width: 6px;
+		height: 6px;
 	}
 	::-webkit-scrollbar-track {
-		background: #000000;
+		background: #0b0d0e;
 	}
 	::-webkit-scrollbar-thumb {
-		background: #18181b; /* zinc-900 */
-		border-radius: 2px;
+		background: #27272a; /* zinc-800 */
+		border-radius: 3px;
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #27272a; /* zinc-800 */
+		background: #3f3f46; /* zinc-700 */
 	}
 }
