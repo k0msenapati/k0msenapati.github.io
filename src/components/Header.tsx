@@ -1,4 +1,10 @@
-import { FaDownload } from 'react-icons/fa6';
+import {
+	FaGithub,
+	FaLinkedinIn,
+	FaXTwitter,
+	FaDev,
+	FaRegFileLines
+} from 'react-icons/fa6';
 
 export const Header = () => {
 	return (
@@ -16,16 +22,56 @@ export const Header = () => {
 					relaxing with a good movie or getting into a new series.
 				</p>
 
-				<div className="pt-2">
+				<div className="flex items-center gap-5 pt-3">
 					<a
-						href="https://drive.google.com/file/d/196JmgWnE-xKT2Qas0B5tO1CWWLpEUHzi/view?usp=drive_link"
-						download
+						href="https://github.com/k0msenapati"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="group inline-flex items-center gap-2 px-4 py-2 border border-zinc-800 text-zinc-300 hover:text-teal-300 hover:border-teal-800 bg-zinc-900/10 hover:bg-zinc-900/40 text-xs font-mono uppercase tracking-wider transition-all duration-300"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+						title="GitHub"
+						aria-label="GitHub"
 					>
-						<FaDownload className="text-zinc-400 group-hover:text-teal-400 transition-colors duration-300" />
-						<span>Download Resume</span>
+						<FaGithub size={22} />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/k0msenapati/"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+						title="LinkedIn"
+						aria-label="LinkedIn"
+					>
+						<FaLinkedinIn size={22} />
+					</a>
+					<a
+						href="https://x.com/k0msenapati"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+						title="Twitter / X"
+						aria-label="Twitter / X"
+					>
+						<FaXTwitter size={22} />
+					</a>
+					<a
+						href="https://dev.to/k0msenapati"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+						title="Blog (DEV Community)"
+						aria-label="Blog (DEV Community)"
+					>
+						<FaDev size={22} />
+					</a>
+					<a
+						href="https://drive.google.com/file/d/196JmgWnE-xKT2Qas0B5tO1CWWLpEUHzi/view?usp=drive_link"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+						title="Download Resume"
+						aria-label="Download Resume"
+					>
+						<FaRegFileLines size={22} />
 					</a>
 				</div>
 			</div>

@@ -10,12 +10,12 @@ const contactLinks: ContactLink[] = [
 	{
 		name: 'LinkedIn',
 		url: 'https://www.linkedin.com/in/k0msenapati/',
-		icon: <FaLinkedinIn size={18} />
+		icon: <FaLinkedinIn size={22} />
 	},
 	{
 		name: 'Twitter / X',
 		url: 'https://x.com/k0msenapati',
-		icon: <FaXTwitter size={18} />
+		icon: <FaXTwitter size={22} />
 	}
 ];
 
@@ -40,7 +40,7 @@ export const Contact = () => {
 						href={link.url}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center justify-center w-11 h-11 rounded-full border border-zinc-800 bg-zinc-900/10 text-zinc-400 hover:text-teal-400 hover:border-teal-800 hover:bg-zinc-900/30 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-sm"
+						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
 						title={link.name}
 						aria-label={link.name}
 					>
