@@ -1,20 +1,33 @@
+import { FaGraduationCap } from 'react-icons/fa6';
+
 interface EducationItemProps {
 	degree: string;
 	school: string;
 	period: string;
 	marks: string; // Rendered in green
+	icon?: React.ReactNode;
+	isLast?: boolean;
 }
 
 export const EducationItem = ({
 	degree,
 	school,
 	period,
-	marks
+	marks,
+	icon,
+	isLast
 }: EducationItemProps) => {
 	return (
 		<div className="relative group">
-			{/* Minimal timeline node */}
-			<span className="absolute -left-[27.5px] top-2 w-2 h-2 rounded-full bg-zinc-800 border border-zinc-700 group-hover:bg-teal-400 group-hover:border-teal-450 transition-all duration-300 shadow-[0_0_8px_rgba(45,212,191,0)] group-hover:shadow-[0_0_8px_rgba(45,212,191,0.6)]"></span>
+			{/* Timeline connector line (ends at the last item) */}
+			{!isLast && (
+				<div className="absolute left-[-32.5px] top-[38px] bottom-[-40px] w-[1px] bg-zinc-800/60"></div>
+			)}
+
+			{/* Timeline node with dynamic icon */}
+			<div className="absolute -left-[50px] top-0.5 flex items-center justify-center w-9 h-9 rounded-full border border-zinc-800 bg-[#0B0D0E] text-zinc-400 group-hover:border-teal-400/80 group-hover:text-teal-400 transition-all duration-300 shadow-[0_0_10px_rgba(45,212,191,0)] group-hover:shadow-[0_0_10px_rgba(45,212,191,0.15)]">
+				{icon || <FaGraduationCap size={18} />}
+			</div>
 
 			<div className="space-y-1">
 				<div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
