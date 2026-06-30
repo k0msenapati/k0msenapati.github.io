@@ -66,7 +66,7 @@ export const Skills = () => {
 				{categories.map((category, catIdx) => (
 					<div
 						key={catIdx}
-						className="p-6 border border-zinc-800/60 bg-zinc-900/10 hover:border-zinc-700/80 transition-colors duration-300 shadow-sm shadow-black/10"
+						className="p-6 border border-zinc-800/60 bg-zinc-900/10 hover:border-zinc-700/80 transition-colors duration-300 shadow-sm shadow-black/10 rounded-xl"
 					>
 						<h3 className="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-6 border-b border-zinc-800 pb-2">
 							// {category.title}
@@ -76,7 +76,7 @@ export const Skills = () => {
 							{category.skills.map((skill, skillIdx) => (
 								<div
 									key={skillIdx}
-									className="group/skill flex items-center gap-2.5 px-3 py-2 border border-zinc-800 bg-zinc-900/10 text-zinc-300 font-sans text-xs sm:text-sm transition-all duration-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-900/30"
+									className="group/skill flex items-center gap-2.5 px-3 py-2 border border-zinc-800 bg-zinc-900/10 text-zinc-300 font-sans text-xs sm:text-sm rounded-lg transition-all duration-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-900/30 hover:shadow-sm"
 								>
 									<div className="text-zinc-400 group-hover/skill:text-teal-400 transition-colors duration-200">
 										{skill.icon}

@@ -47,11 +47,11 @@ export const ExperienceItem = ({
 					))}
 				</ul>
 
-				<div className="flex flex-wrap gap-2 pt-1">
+				<div className="flex flex-wrap gap-1.5 pt-1">
 					{techUsed.map((tech, idx) => (
 						<span
 							key={idx}
-							className="text-[10px] font-mono text-zinc-400 border border-zinc-850 px-2 py-0.5 bg-zinc-900/30 group-hover:border-zinc-700 group-hover:text-zinc-300 transition-colors duration-300"
+							className="text-xs font-sans font-medium text-zinc-300 border border-zinc-800/80 bg-zinc-900/40 px-2.5 py-0.5 rounded-full transition-all duration-300 hover:border-teal-500/30 hover:bg-teal-950/10 hover:text-teal-300 cursor-default shadow-sm shadow-black/10"
 						>
 							{tech}
 						</span>

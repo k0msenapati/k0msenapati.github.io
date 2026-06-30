@@ -20,7 +20,7 @@ export const ProjectItem = ({
 	ytVideoId
 }: ProjectItemProps) => {
 	return (
-		<div className="group flex flex-col h-full border border-zinc-800/80 bg-zinc-900/10 transition-all duration-300 hover:border-zinc-700/80 hover:bg-zinc-900/20 shadow-sm shadow-black/20">
+		<div className="group flex flex-col h-full border border-zinc-800/80 bg-zinc-900/10 transition-all duration-300 hover:border-zinc-700/80 hover:bg-zinc-900/20 shadow-sm shadow-black/20 rounded-xl overflow-hidden">
 			{/* Media Area */}
 			<div className="relative aspect-video w-full bg-zinc-950/90 border-b border-zinc-800/80 overflow-hidden flex items-center justify-center">
 				{isComingSoon ? (
@@ -75,11 +75,11 @@ export const ProjectItem = ({
 				</p>
 
 				{/* Tech Badges */}
-				<div className="flex flex-wrap gap-2 pt-2">
+				<div className="flex flex-wrap gap-1.5 pt-2">
 					{techStack.map((tech, idx) => (
 						<span
 							key={idx}
-							className="text-[10px] font-mono text-zinc-400 border border-zinc-800 bg-zinc-900/30 px-2 py-0.5 group-hover:border-zinc-700/60 group-hover:text-zinc-300 transition-colors duration-300"
+							className="text-xs font-sans font-medium text-zinc-300 border border-zinc-800/80 bg-zinc-900/40 px-2.5 py-0.5 rounded-full transition-all duration-300 hover:border-teal-500/30 hover:bg-teal-950/10 hover:text-teal-300 cursor-default shadow-sm shadow-black/10"
 						>
 							{tech}
 						</span>
