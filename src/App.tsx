@@ -7,8 +7,12 @@ import { Projects } from './components/Projects';
 import { Achievements } from './components/Achievements';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { SmoothCursor } from './components/ui/SmoothCursor';
+import { useSmoothScroll } from './hooks/useSmoothScroll';
 
 function App() {
+	useSmoothScroll();
+
 	return (
 		<Wrapper>
 			<Header />
@@ -19,6 +23,7 @@ function App() {
 			<Achievements />
 			<Contact />
 			<Footer />
+			<SmoothCursor />
 		</Wrapper>
 	);
 }

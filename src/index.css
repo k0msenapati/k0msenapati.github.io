@@ -54,4 +54,15 @@
 	::-webkit-scrollbar-thumb:hover {
 		background: #3f3f46; /* zinc-700 */
 	}
+
+	.custom-cursor-active,
+	.custom-cursor-active * {
+		cursor: none !important;
+	}
+
+	.custom-cursor-active input,
+	.custom-cursor-active textarea,
+	.custom-cursor-active [contenteditable] {
+		cursor: text !important;
+	}
 }
