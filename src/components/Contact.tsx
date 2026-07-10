@@ -1,25 +1,10 @@
-import { FaXTwitter, FaLinkedinIn } from 'react-icons/fa6';
-
-interface ContactLink {
-	name: string;
-	url: string;
-	icon: React.ReactNode;
-}
-
-const contactLinks: ContactLink[] = [
-	{
-		name: 'LinkedIn',
-		url: 'https://www.linkedin.com/in/k0msenapati/',
-		icon: <FaLinkedinIn size={22} />
-	},
-	{
-		name: 'Twitter / X',
-		url: 'https://x.com/k0msenapati',
-		icon: <FaXTwitter size={22} />
-	}
-];
+import { profile } from '../data/profile';
 
 export const Contact = () => {
+	const contactLinks = profile.socials.filter(
+		(link) => link.iconType === 'linkedin' || link.iconType === 'twitter'
+	);
+
 	return (
 		<section className="py-16 pb-24">
 			<div className="mb-8">
