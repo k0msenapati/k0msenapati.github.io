@@ -1,24 +1,47 @@
 import { FaGithub } from 'react-icons/fa6';
-import { TbPlayerPlay } from 'react-icons/tb';
+import { TbPlayerPlay, TbExternalLink } from 'react-icons/tb';
 
-interface ProjectItemProps {
+type ProjectItemProps = {
 	name: string;
 	desc: string;
 	techStack: string[];
 	githubUrl: string;
 	demoUrl?: string;
+	imageUrl?: string;
 	isComingSoon?: boolean;
 	ytVideoId?: string;
-}
+};
+
+const getGitHubRepo = (url: string): string | null => {
+	try {
+		const parsed = new URL(url);
+		if (parsed.hostname === 'github.com') {
+			const parts = parsed.pathname.split('/').filter(Boolean);
+			if (parts.length >= 2) {
+				return `${parts[0]}/${parts[1]}`;
+			}
+		}
+	} catch {
+		// ignore invalid URLs
+	}
+	return null;
+};
 
 export const ProjectItem = ({
 	name,
 	desc,
 	techStack,
 	githubUrl,
+	demoUrl,
+	imageUrl,
 	isComingSoon,
 	ytVideoId
 }: ProjectItemProps) => {
+	const repoSlug = getGitHubRepo(githubUrl);
+	const previewImage =
+		imageUrl ||
+		(repoSlug ? `https://opengraph.githubassets.com/1/${repoSlug}` : null);
+
 	return (
 		<div className="group flex flex-col h-full border border-zinc-800/80 bg-zinc-900/10 transition-all duration-300 hover:border-zinc-700/80 hover:bg-zinc-900/20 shadow-sm shadow-black/20 rounded-xl overflow-hidden">
 			{/* Media Area */}
@@ -37,6 +60,7 @@ export const ProjectItem = ({
 						<img
 							src={`https://img.youtube.com/vi/${ytVideoId}/hqdefault.jpg`}
 							alt={`${name} thumbnail`}
+							loading="lazy"
 							className="w-full h-full object-cover opacity-50 group-hover/media:opacity-75 transition-opacity duration-300"
 						/>
 						{/* Styled play overlay */}
@@ -46,6 +70,26 @@ export const ProjectItem = ({
 									size={16}
 									className="translate-x-[1px]"
 								/>
+							</div>
+						</div>
+					</a>
+				) : previewImage ? (
+					<a
+						href={demoUrl || githubUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="relative w-full h-full block group/media"
+					>
+						<img
+							src={previewImage}
+							alt={`${name} preview`}
+							loading="lazy"
+							className="w-full h-full object-cover opacity-70 group-hover/media:opacity-95 transition-opacity duration-300"
+						/>
+						<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/media:opacity-100 transition-opacity duration-300 bg-black/50">
+							<div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-700 bg-zinc-900/90 text-zinc-200 text-xs font-mono shadow-md">
+								<FaGithub size={14} />
+								<span>View on GitHub</span>
 							</div>
 						</div>
 					</a>
@@ -59,15 +103,28 @@ export const ProjectItem = ({
 						{name}
 					</h3>
 
-					<a
-						href={githubUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="p-1 rounded text-zinc-400 hover:text-teal-400 transition-colors duration-300"
-						title="View Source on GitHub"
-					>
-						<FaGithub size={16} />
-					</a>
+					<div className="flex items-center gap-2">
+						{demoUrl && (
+							<a
+								href={demoUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-1 rounded text-zinc-400 hover:text-teal-400 transition-colors duration-300"
+								title="Live Demo"
+							>
+								<TbExternalLink size={16} />
+							</a>
+						)}
+						<a
+							href={githubUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="p-1 rounded text-zinc-400 hover:text-teal-400 transition-colors duration-300"
+							title="View Source on GitHub"
+						>
+							<FaGithub size={16} />
+						</a>
+					</div>
 				</div>
 
 				<p className="text-sm sm:text-[14.5px] text-zinc-300 leading-relaxed flex-grow font-sans">

@@ -6,6 +6,7 @@ export type Project = {
 	techStack: string[];
 	githubUrl: string;
 	demoUrl?: string;
+	imageUrl?: string;
 	isComingSoon?: boolean;
 	ytVideoId?: string;
 	featured: boolean;

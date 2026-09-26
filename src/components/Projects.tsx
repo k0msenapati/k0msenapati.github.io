@@ -23,6 +23,7 @@ export const Projects = () => {
 						techStack={project.techStack}
 						githubUrl={project.githubUrl}
 						demoUrl={project.demoUrl}
+						imageUrl={project.imageUrl}
 						isComingSoon={project.isComingSoon}
 						ytVideoId={project.ytVideoId}
 					/>
