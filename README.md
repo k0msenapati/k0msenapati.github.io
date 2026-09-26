@@ -22,6 +22,7 @@ My personal developer portfolio website. Built with React, TypeScript, and Tailw
 Follow these steps to copy this project, customize it with your own details, and deploy it to your personal domain or GitHub Pages.
 
 ### 1. Download & Clone
+
 Clone this repository to your local system and install dependencies. This project uses **Bun** as the package manager:
 
 ```bash
@@ -34,6 +35,7 @@ bun install
 ```
 
 ### 2. Customize Content (`src/data/`)
+
 All personal details, skills, experiences, projects, and achievements are isolated into pure data modules inside the `src/data/` folder. Simply open and edit these files to customize the portfolio:
 
 - **[profile.tsx](src/data/profile.tsx):** Name, nickname, bio, avatar image, and social media/resume links.
@@ -46,29 +48,37 @@ All personal details, skills, experiences, projects, and achievements are isolat
 ### 3. Personalize Assets, Configs, & Meta Tags
 
 #### Edit Favicon & Icons
+
 - Replace the favicon file located at `public/favicon.svg` with your own SVG.
 - Replace the avatar image/icon details if needed under `public/`.
 
 #### Update Package Metadata & GitHub Pages URL
+
 Open `package.json` and change the following fields:
+
 - `"name"`: your-portfolio-name
 - `"homepage"`: Change `"https://k0msenapati.github.io"` to your target URL (e.g., `https://yourusername.github.io` or your custom domain).
 
 #### Update Meta Tags & Title (SEO)
+
 Update titles and meta descriptions in these files for search engine optimization:
+
 - **`index.html`** (Main title and meta tags)
 - **`src/pages/Portfolio.tsx`** (Home page `<title>` and metadata description)
 - **`src/pages/ProjectsPage.tsx`** (Archive page `<title>` and metadata description)
 
 ### 4. Verify Locally
+
 Start the development server to check your changes in real-time:
 
 ```bash
 bun dev
 ```
+
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### 5. Upload to Your New GitHub Repository
+
 Initialize a clean Git repository or update the existing remote origin to push to your new repo:
 
 ```bash
@@ -85,13 +95,15 @@ git push -u origin master
 ```
 
 ### 6. Deploy to GitHub Pages
+
 A script has been set up using `gh-pages` to compile and deploy the static website in one command:
 
 ```bash
 bun run deploy
 ```
-This automatically runs typescript checks, compiles the production bundle into `/dist`, and uploads it to the `gh-pages` deployment branch of your repository. 
 
-*Note: In your GitHub Repository Settings under the **Pages** tab, ensure the build source is set to deploy from the `gh-pages` branch.*
+This automatically runs typescript checks, compiles the production bundle into `/dist`, and uploads it to the `gh-pages` deployment branch of your repository.
+
+_Note: In your GitHub Repository Settings under the **Pages** tab, ensure the build source is set to deploy from the `gh-pages` branch._
 
 </details>

@@ -37,7 +37,12 @@ export type Achievement = {
 	linkUrl?: string;
 };
 
-export type SocialIconType = 'github' | 'linkedin' | 'twitter' | 'dev' | 'resume';
+export type SocialIconType =
+	| 'github'
+	| 'linkedin'
+	| 'twitter'
+	| 'dev'
+	| 'resume';
 
 export type SocialLink = {
 	name: string;
