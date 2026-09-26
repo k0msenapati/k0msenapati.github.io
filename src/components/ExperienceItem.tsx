@@ -1,14 +1,15 @@
+import type { IconType } from 'react-icons';
 import { FaBriefcase } from 'react-icons/fa6';
 
-interface ExperienceItemProps {
+type ExperienceItemProps = {
 	role: string;
 	company: string;
 	period: string;
 	description: string[];
 	techUsed: string[];
-	icon?: React.ReactNode;
+	icon?: IconType;
 	isLast?: boolean;
-}
+};
 
 export const ExperienceItem = ({
 	role,
@@ -16,7 +17,7 @@ export const ExperienceItem = ({
 	period,
 	description,
 	techUsed,
-	icon,
+	icon: Icon = FaBriefcase,
 	isLast
 }: ExperienceItemProps) => {
 	return (
@@ -28,7 +29,7 @@ export const ExperienceItem = ({
 
 			{/* Timeline node with dynamic icon */}
 			<div className="absolute -left-[50px] top-0.5 flex items-center justify-center w-9 h-9 rounded-full border border-zinc-800 bg-[#0B0D0E] text-zinc-400 group-hover:border-teal-400/80 group-hover:text-teal-400 transition-all duration-300 shadow-[0_0_10px_rgba(45,212,191,0)] group-hover:shadow-[0_0_10px_rgba(45,212,191,0.15)]">
-				{icon || <FaBriefcase size={18} />}
+				<Icon size={18} />
 			</div>
 
 			<div className="space-y-3">

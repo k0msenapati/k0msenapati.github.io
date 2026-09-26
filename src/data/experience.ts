@@ -28,7 +28,7 @@ export const experiences: WorkItem[] = [
 			'Python',
 			'Rapid Prototyping'
 		],
-		icon: <FaLaptopCode size={18} />
+		icon: FaLaptopCode
 	},
 	{
 		company: 'TSCircuit',

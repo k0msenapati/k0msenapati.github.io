@@ -1,20 +1,21 @@
+import type { IconType } from 'react-icons';
 import { FaGraduationCap } from 'react-icons/fa6';
 
-interface EducationItemProps {
+type EducationItemProps = {
 	degree: string;
 	school: string;
 	period: string;
 	marks: string; // Rendered in green
-	icon?: React.ReactNode;
+	icon?: IconType;
 	isLast?: boolean;
-}
+};
 
 export const EducationItem = ({
 	degree,
 	school,
 	period,
 	marks,
-	icon,
+	icon: Icon = FaGraduationCap,
 	isLast
 }: EducationItemProps) => {
 	return (
@@ -26,7 +27,7 @@ export const EducationItem = ({
 
 			{/* Timeline node with dynamic icon */}
 			<div className="absolute -left-[50px] top-0.5 flex items-center justify-center w-9 h-9 rounded-full border border-zinc-800 bg-[#0B0D0E] text-zinc-400 group-hover:border-teal-400/80 group-hover:text-teal-400 transition-all duration-300 shadow-[0_0_10px_rgba(45,212,191,0)] group-hover:shadow-[0_0_10px_rgba(45,212,191,0.15)]">
-				{icon || <FaGraduationCap size={18} />}
+				<Icon size={18} />
 			</div>
 
 			<div className="space-y-1">

@@ -20,19 +20,22 @@ export const Skills = () => {
 						</h3>
 
 						<div className="grid grid-cols-2 gap-3">
-							{category.skills.map((skill, skillIdx) => (
-								<div
-									key={skillIdx}
-									className="group/skill flex items-center gap-2.5 px-3 py-2 border border-zinc-800 bg-zinc-900/10 text-zinc-300 font-sans text-xs sm:text-sm rounded-lg transition-all duration-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-900/30 hover:shadow-sm"
-								>
-									<div className="text-zinc-400 group-hover/skill:text-teal-400 transition-colors duration-200">
-										{skill.icon}
+							{category.skills.map((skill, skillIdx) => {
+								const Icon = skill.icon;
+								return (
+									<div
+										key={skillIdx}
+										className="group/skill flex items-center gap-2.5 px-3 py-2 border border-zinc-800 bg-zinc-900/10 text-zinc-300 font-sans text-xs sm:text-sm rounded-lg transition-all duration-200 hover:text-white hover:border-zinc-700 hover:bg-zinc-900/30 hover:shadow-sm"
+									>
+										<div className="text-zinc-400 group-hover/skill:text-teal-400 transition-colors duration-200">
+											<Icon size={16} />
+										</div>
+										<span className="truncate">
+											{skill.name}
+										</span>
 									</div>
-									<span className="truncate">
-										{skill.name}
-									</span>
-								</div>
-							))}
+								);
+							})}
 						</div>
 					</div>
 				))}

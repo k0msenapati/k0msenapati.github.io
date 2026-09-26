@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { IconType } from 'react-icons';
 
 export type Project = {
 	name: string;
@@ -16,7 +16,7 @@ export type EducationItemData = {
 	degree: string;
 	period: string;
 	marks: string;
-	icon?: ReactNode;
+	icon?: IconType;
 };
 
 export type WorkItem = {
@@ -25,7 +25,7 @@ export type WorkItem = {
 	period: string;
 	description: string[];
 	techUsed: string[];
-	icon?: ReactNode;
+	icon?: IconType;
 };
 
 export type Achievement = {
@@ -41,7 +41,7 @@ export type SocialIconType = 'github' | 'linkedin' | 'twitter' | 'dev' | 'resume
 export type SocialLink = {
 	name: string;
 	url: string;
-	icon: ReactNode;
+	icon: IconType;
 	iconType: SocialIconType;
 };
 
@@ -55,7 +55,7 @@ export type ProfileData = {
 
 export type Skill = {
 	name: string;
-	icon: ReactNode;
+	icon: IconType;
 };
 
 export type SkillCategory = {

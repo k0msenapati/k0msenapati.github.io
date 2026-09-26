@@ -16,31 +16,31 @@ export const profile: ProfileData = {
 		{
 			name: 'GitHub',
 			url: 'https://github.com/k0msenapati',
-			icon: <FaGithub size={22} />,
+			icon: FaGithub,
 			iconType: 'github'
 		},
 		{
 			name: 'LinkedIn',
 			url: 'https://www.linkedin.com/in/k0msenapati/',
-			icon: <FaLinkedinIn size={22} />,
+			icon: FaLinkedinIn,
 			iconType: 'linkedin'
 		},
 		{
 			name: 'Twitter / X',
 			url: 'https://x.com/k0msenapati',
-			icon: <FaXTwitter size={22} />,
+			icon: FaXTwitter,
 			iconType: 'twitter'
 		},
 		{
 			name: 'Blog (DEV Community)',
 			url: 'https://dev.to/k0msenapati',
-			icon: <FaDev size={22} />,
+			icon: FaDev,
 			iconType: 'dev'
 		},
 		{
 			name: 'Download Resume',
 			url: 'https://drive.google.com/file/d/196JmgWnE-xKT2Qas0B5tO1CWWLpEUHzi/view?usp=drive_link',
-			icon: <FaRegFileLines size={22} />,
+			icon: FaRegFileLines,
 			iconType: 'resume'
 		}
 	]

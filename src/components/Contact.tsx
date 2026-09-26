@@ -19,19 +19,22 @@ export const Contact = () => {
 			</p>
 
 			<div className="flex items-center gap-5">
-				{contactLinks.map((link, index) => (
-					<a
-						key={index}
-						href={link.url}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
-						title={link.name}
-						aria-label={link.name}
-					>
-						{link.icon}
-					</a>
-				))}
+				{contactLinks.map((link, index) => {
+					const Icon = link.icon;
+					return (
+						<a
+							key={index}
+							href={link.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-zinc-400 hover:text-teal-400 transition-all duration-200 hover:scale-105"
+							title={link.name}
+							aria-label={link.name}
+						>
+							<Icon size={22} />
+						</a>
+					);
+				})}
 			</div>
 		</section>
 	);
