@@ -1,10 +1,4 @@
-export interface Achievement {
-	title: string;
-	description: string;
-	date: string;
-	linkText?: string;
-	linkUrl?: string;
-}
+import type { Achievement } from '@/types';
 
 export const achievements: Achievement[] = [
 	{

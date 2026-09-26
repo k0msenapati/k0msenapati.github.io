@@ -1,13 +1,5 @@
-import React from 'react';
+import type { EducationItemData } from '@/types';
 import { FaGraduationCap, FaSchool } from 'react-icons/fa6';
-
-export interface EducationItemData {
-	school: string;
-	degree: string;
-	period: string;
-	marks: string;
-	icon: React.ReactNode;
-}
 
 export const educationData: EducationItemData[] = [
 	{

@@ -1,13 +1,4 @@
-export interface Project {
-	name: string;
-	desc: string;
-	techStack: string[];
-	githubUrl: string;
-	demoUrl?: string;
-	isComingSoon?: boolean;
-	ytVideoId?: string;
-	featured: boolean;
-}
+import type { Project } from '@/types';
 
 export const projects: Project[] = [
 	{

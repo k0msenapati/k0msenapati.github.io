@@ -1,4 +1,4 @@
-import React from 'react';
+import type { ProfileData } from '@/types';
 import {
 	FaGithub,
 	FaLinkedinIn,
@@ -6,21 +6,6 @@ import {
 	FaDev,
 	FaRegFileLines
 } from 'react-icons/fa6';
-
-export interface SocialLink {
-	name: string;
-	url: string;
-	icon: React.ReactNode;
-	iconType: 'github' | 'linkedin' | 'twitter' | 'dev' | 'resume';
-}
-
-export interface ProfileData {
-	name: string;
-	nickname: string;
-	bio: string;
-	avatarUrl: string;
-	socials: SocialLink[];
-}
 
 export const profile: ProfileData = {
 	name: 'K Om Senapati',

@@ -1,14 +1,5 @@
-import React from 'react';
+import type { WorkItem } from '@/types';
 import { FaLaptopCode } from 'react-icons/fa6';
-
-export interface WorkItem {
-	company: string;
-	role: string;
-	period: string;
-	description: string[];
-	techUsed: string[];
-	icon?: React.ReactNode;
-}
 
 export const experiences: WorkItem[] = [
 	{

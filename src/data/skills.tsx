@@ -1,4 +1,4 @@
-import React from 'react';
+import type { SkillCategory } from '@/types';
 import { FaReact, FaPython } from 'react-icons/fa6';
 import {
 	SiTailwindcss,
@@ -10,16 +10,6 @@ import {
 	SiFlask,
 	SiFastapi
 } from 'react-icons/si';
-
-export interface Skill {
-	name: string;
-	icon: React.ReactNode;
-}
-
-export interface SkillCategory {
-	title: string;
-	skills: Skill[];
-}
 
 export const skillCategories: SkillCategory[] = [
 	{
