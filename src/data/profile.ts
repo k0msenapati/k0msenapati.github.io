@@ -39,7 +39,7 @@ export const profile: ProfileData = {
 		},
 		{
 			name: 'Download Resume',
-			url: 'https://drive.google.com/file/d/196JmgWnE-xKT2Qas0B5tO1CWWLpEUHzi/view?usp=drive_link',
+			url: 'https://drive.google.com/file/d/16Gg5JNKyNFmTbkdyPp2jcBd04h0GT6Fw/view?usp=sharing',
 			icon: FaRegFileLines,
 			iconType: 'resume'
 		}
